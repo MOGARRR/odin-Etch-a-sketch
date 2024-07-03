@@ -1,4 +1,10 @@
 let container = document.querySelector('#container');
-let square = document.createElement('div');
 
-let square_amount = 0;
+let square_amount = 256;
+
+/*let createGrid = (square_amount) => {
+    for(let i = 0; i < square_amount; i++){
+    let square = document.createElement('div');
+    container.appendChild(square);
+    };
+};*/
