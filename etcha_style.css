@@ -1,9 +1,19 @@
 body{
     background-color: gray;
+    display: flex;
+    flex-direction: column;
+
+}
+button{
+    align-self: center;
+    width: 5em;
+    padding: 1em;
+    margin: 1em;
+    font-size: large
+   
 }
 
 #container{
-    background-color: red;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -21,6 +31,7 @@ body{
     flex-grow: 1;
 }
 
-#grid:hover{
-    background-color: blueviolet;
+.active{
+    background-color: blue;
 }
+

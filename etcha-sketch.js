@@ -20,3 +20,10 @@ grid.addEventListener('mouseover', () =>{
     grid.setAttribute('style','background-color:blue;');
 });
 });
+
+let reset = document.querySelector('button');
+reset.addEventListener('click', ()=>{
+    grids.forEach((grid)=>{
+        grid.setAttribute('style','background-color:white;');
+    });
+});
