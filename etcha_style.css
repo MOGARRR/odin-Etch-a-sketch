@@ -20,3 +20,7 @@ body{
     min-width: 50px;
     flex-grow: 1;
 }
+
+#grid:hover{
+    background-color: blueviolet;
+}

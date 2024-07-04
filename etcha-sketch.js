@@ -11,3 +11,12 @@ let createGrid = (square_amount) => {
 };
 
 createGrid(square_amount);
+
+let grids = document.querySelectorAll('#grid');
+Array.from(grids);
+
+grids.forEach((grid) => {
+grid.addEventListener('mouseover', () =>{
+    grid.setAttribute('style','background-color:blue;');
+});
+});
