@@ -17,7 +17,7 @@ let createGrid = (grid_Sides) => {
 };
 
 createGrid(grid_Sides);
-/*
+
 let blocks = document.querySelectorAll('#block');
 Array.from(blocks);
 
@@ -29,7 +29,7 @@ block.addEventListener('mouseover', () =>{
 
 let reset = document.querySelector('button');
 reset.addEventListener('click', ()=>{
-    block.forEach((block)=>{
+    blocks.forEach((block)=>{
         block.setAttribute('style','background-color:white;');
     });
-});*/
+});
