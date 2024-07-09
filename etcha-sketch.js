@@ -1,29 +1,35 @@
 let container = document.querySelector('#container');
 
-let square_amount = 256;
+let grid_Sides = 16;
 
-let createGrid = (square_amount) => {
-    for(let i = 0; i < square_amount; i++){
-    let square = document.createElement('div');
-    square.setAttribute('id','grid');
-    container.appendChild(square);
+let createGrid = (grid_Sides) => {
+    for(let i = 0; i < grid_Sides; i++){
+    let line = document.createElement('div');
+    line.setAttribute('id','line');
+    for(let j = 0; j < grid_Sides;j++){
+    let block = document.createElement('div')
+    block.setAttribute('id','block')
+    //block.textContent = j;
+    line.appendChild(block);
+    };
+    container.appendChild(line);
     };
 };
 
-createGrid(square_amount);
+createGrid(grid_Sides);
+/*
+let blocks = document.querySelectorAll('#block');
+Array.from(blocks);
 
-let grids = document.querySelectorAll('#grid');
-Array.from(grids);
-
-grids.forEach((grid) => {
-grid.addEventListener('mouseover', () =>{
-    grid.setAttribute('style','background-color:blue;');
+blocks.forEach((block) => {
+block.addEventListener('mouseover', () =>{
+    block.setAttribute('style','background-color:blue;');
 });
 });
 
 let reset = document.querySelector('button');
 reset.addEventListener('click', ()=>{
-    grids.forEach((grid)=>{
-        grid.setAttribute('style','background-color:white;');
+    block.forEach((block)=>{
+        block.setAttribute('style','background-color:white;');
     });
-});
+});*/
