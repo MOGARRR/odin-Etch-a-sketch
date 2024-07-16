@@ -1,7 +1,6 @@
 let container = document.querySelector('#container');
 let input = document.querySelector('input');
-let blocks = document.querySelectorAll('#block');
-Array.from(blocks);
+let blocks = [];
 
 
 
@@ -15,9 +14,18 @@ let createGrid = (grid_Sides) => {
     block.setAttribute('id','block')
     line.appendChild(block);
     };
-
     container.appendChild(line);
     };
+
+    let blocks = document.querySelectorAll('#block');
+    Array.from(blocks);
+
+    blocks.forEach((block)=>{
+        block.addEventListener('mouseover', ()=>{
+            block.setAttribute('style','background-color:blue;');
+        });
+    });
+
 };
 
 
@@ -41,3 +49,5 @@ start.addEventListener('click',()=>{
     createGrid(grid_Sides);
 
 });
+
+console.log(blocks);
