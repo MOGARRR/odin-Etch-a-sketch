@@ -22,7 +22,8 @@ let createGrid = (grid_Sides) => {
 
     blocks.forEach((block)=>{
         block.addEventListener('mouseover', ()=>{
-            block.setAttribute('style','background-color:blue;');
+            let colors =rgb();
+            block.style.backgroundColor=`rgb(${colors[0]},${colors[1]},${colors[2]})`;
         });
     });
 
@@ -58,3 +59,11 @@ start.addEventListener('click',()=>{
     createGrid(grid_Sides);
     }
 });
+
+let rgb = () =>{
+    let rgbArray = [];
+    for (let i = 0; i < 3; i++){
+    rgbArray.push(Math.floor(Math.random()*255));
+}
+return rgbArray;
+};
