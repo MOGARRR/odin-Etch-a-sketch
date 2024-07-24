@@ -1,6 +1,8 @@
 let container = document.querySelector('#container');
 let input = document.querySelector('input');
 let blocks = [];
+let opacity = 1;
+
 
 
 
@@ -16,17 +18,27 @@ let createGrid = (grid_Sides) => {
     };
     container.appendChild(line);
     };
+    gridInteract();
 
+};
+
+let gridInteract = () =>{
     let blocks = document.querySelectorAll('#block');
     Array.from(blocks);
+   
+    let darken = 0;
 
     blocks.forEach((block)=>{
         block.addEventListener('mouseover', ()=>{
-            let colors =rgb();
-            block.style.backgroundColor=`rgb(${colors[0]},${colors[1]},${colors[2]})`;
+            let colors = rgb();
+            block.style.backgroundColor =`rgb(${colors[0]},${colors[1]},${colors[2]})`;
+            block.style.opacity = `${opacity - darken}`;
+            darken = darken + 0.1
+            return darken ;
+        
+            
         });
     });
-
 };
 
 
